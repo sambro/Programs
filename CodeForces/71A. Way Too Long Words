@@ -8,7 +8,6 @@ int main(){
     string s;
     int n,i,l;
 
-    cout<<"how many words ?"<<endl;
     cin>>n;
 
 
