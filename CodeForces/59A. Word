@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string.h>
+#include <cctype>
+#include <cstring>
+
+
+using namespace std;
+
+
+int main()
+{
+    int length,i,n,upcount=0,lowcount=0;
+    string str;
+
+    cin>>str;
+
+    n=str.size();
+
+    for(i=0;i<n;i++){
+        if(isupper(str[i])==1){
+            upcount++;
+        }
+
+        else{
+            lowcount++;
+        }
+    }
+    if(upcount>lowcount){
+        for(i=0;i<n;i++){
+            str[i]=toupper(str[i]);
+        }
+    }
+    else if(upcount<lowcount){
+        for(i=0;i<n;i++){
+            str[i]=tolower(str[i]);
+        }
+    }
+    else{
+        for(i=0;i<n;i++){
+            str[i]=tolower(str[i]);
+    }
+    }
+    cout<<str<<endl;
+
+
+ return 0;
+}
